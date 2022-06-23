@@ -276,14 +276,11 @@ namespace XebecAPI.Controllers
                 await _unitOfWork.Save();
 
                 return NoContent();
-
-
             }
             catch (Exception e)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, e.Message);
             }
-
         }
     }
 }

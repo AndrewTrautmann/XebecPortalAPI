@@ -67,6 +67,7 @@ namespace XebecAPI.Repositories
         private IGenericRepository<Company> _companies;
         private IGenericRepository<Location> _locations;
         private IGenericRepository<Policy> _policies;
+        private IGenericRepository<ProfilePicture> _profilePictures;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -143,6 +144,7 @@ namespace XebecAPI.Repositories
         public IGenericRepository<Company> Companies  => _companies ??= new GenericRepository<Company>(_context);
         public IGenericRepository<Location> Locations  => _locations ??= new GenericRepository<Location>(_context);
         public IGenericRepository<Policy> Policies  => _policies ??= new GenericRepository<Policy>(_context);
+        public IGenericRepository<ProfilePicture> ProfilePictures  => _profilePictures ??= new GenericRepository<ProfilePicture>(_context);
 
         public void Dispose()
         {
