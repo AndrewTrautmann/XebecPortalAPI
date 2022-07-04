@@ -14,7 +14,7 @@ namespace XebecAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class QuestionController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
