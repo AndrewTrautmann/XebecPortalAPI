@@ -18,7 +18,7 @@ namespace XebecAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class JobTypeController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -52,7 +52,6 @@ namespace XebecAPI.Controllers
 
         // GET api/<JobTypesController>/5
         [HttpGet("{id}")]
-        [Authorize]
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status200OK)]
