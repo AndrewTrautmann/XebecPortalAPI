@@ -15,7 +15,7 @@ namespace XebecAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class QuestionnaireController : ControllerBase
     {
 

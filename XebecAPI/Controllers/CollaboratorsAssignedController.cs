@@ -16,7 +16,7 @@ namespace XebecAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class CollaboratorsAssignedController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
