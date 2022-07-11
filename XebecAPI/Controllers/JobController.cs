@@ -18,7 +18,7 @@ namespace XebecAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class JobController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -73,7 +73,7 @@ namespace XebecAPI.Controllers
 
         // POST api/<JobsController>
         [HttpPost]
-        [Authorize]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -110,7 +110,7 @@ namespace XebecAPI.Controllers
 
         // PUT api/<JobsController>/5
         [HttpPut("{id}")]
-        [Authorize]
+        [AllowAnonymous]
         public async Task<IActionResult> UpdateJob(int id, [FromBody] JobDTO Job)
         {
             if (!ModelState.IsValid)
@@ -144,7 +144,7 @@ namespace XebecAPI.Controllers
 
         // DELETE api/<JobsController>/5
         [HttpDelete("{id}")]
-        [Authorize]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
