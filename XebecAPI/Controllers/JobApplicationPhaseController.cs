@@ -19,7 +19,7 @@ namespace XebecAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class JobApplicationPhaseController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;

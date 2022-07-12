@@ -18,7 +18,7 @@ namespace XebecAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class JobPlatformHelperController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -87,7 +87,7 @@ namespace XebecAPI.Controllers
 
         // POST api/<JobPlatformHelpersController>
         [HttpPost]
-        [Authorize]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -122,7 +122,7 @@ namespace XebecAPI.Controllers
 
         // POST api/<UsersController>
         [HttpPost("list")]
-        [Authorize]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
