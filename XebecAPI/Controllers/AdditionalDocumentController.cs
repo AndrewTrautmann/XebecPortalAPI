@@ -13,11 +13,15 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace XebecAPI.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize]
     public class AdditionalDocumentController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper mapper;
 
+        
         public AdditionalDocumentController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
