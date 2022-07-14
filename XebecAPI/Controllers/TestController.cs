@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using XebecAPI.DTOs;
 using XebecAPI.IRepositories;
+using XebecAPI.IRepositories.CustomIRepositories;
 using XebecAPI.Shared;
 
 namespace XebecAPI.Controllers

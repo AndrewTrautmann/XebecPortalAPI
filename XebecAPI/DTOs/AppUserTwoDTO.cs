@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XebecAPI.Shared.Security
+namespace XebecAPI.DTOs
 {
     public class AppUserTwoDTO
     {
@@ -26,16 +26,16 @@ namespace XebecAPI.Shared.Security
         //used for registration
         public AppUserTwoDTO(string email, string PasswordHash, string role, string name, string surname)
         {
-            this.Email = email;
+            Email = email;
             this.PasswordHash = PasswordHash;
-            this.Role = role;
-            this.Name = name;
-            this.Surname = surname;
+            Role = role;
+            Name = name;
+            Surname = surname;
             LinkVisits = 0;
         }
         public AppUserTwoDTO(string email, string PasswordHash)
         {
-            this.Email = email;
+            Email = email;
             this.PasswordHash = PasswordHash;
         }
 

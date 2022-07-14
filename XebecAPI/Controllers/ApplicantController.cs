@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using XebecAPI.Data;
-using XebecAPI.IRepositories;
 using XebecAPI.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +10,7 @@ using System.Threading.Tasks;
 
 using XebecAPI.DTOs.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using XebecAPI.IRepositories.CustomIRepositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
