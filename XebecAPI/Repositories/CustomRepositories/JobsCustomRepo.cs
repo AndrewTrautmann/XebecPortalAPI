@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using XebecAPI.Data;
-using XebecAPI.IRepositories;
+using XebecAPI.IRepositories.CustomIRepositories;
 using XebecAPI.Shared;
 
-namespace XebecAPI.Repositories
+namespace XebecAPI.Repositories.CustomRepositories
 {
     public class JobsCustomRepo : GenericRepository<Job>, IJobsCustomRepo
     {
@@ -18,7 +18,7 @@ namespace XebecAPI.Repositories
 
         public async Task<List<Job>> GetAllJobsFullDetails()
         {
-              return await _context.Jobs.Include(t => t.JobTypes).ThenInclude(x => x.JobType).Include(p => p.JobPlatforms).Include(z => z.Department).Include(q => q.Company).Include(x => x.Location).Include(x => x.Policy).AsNoTracking().ToListAsync();
+            return await _context.Jobs.Include(t => t.JobTypes).ThenInclude(x => x.JobType).Include(p => p.JobPlatforms).Include(z => z.Department).Include(q => q.Company).Include(x => x.Location).Include(x => x.Policy).AsNoTracking().ToListAsync();
         }
 
         public async Task<Job> GetJobTDetails(int JobId)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using XebecAPI.Shared;
 
-namespace XebecAPI.IRepositories
+namespace XebecAPI.IRepositories.CustomIRepositories
 {
     public interface IJobsCustomRepo
     {

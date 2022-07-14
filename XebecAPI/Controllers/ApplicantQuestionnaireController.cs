@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using XebecAPI.Shared;
 using Microsoft.AspNetCore.Authorization;
+using XebecAPI.IRepositories.CustomIRepositories;
 
 namespace XebecAPI.Controllers
 {

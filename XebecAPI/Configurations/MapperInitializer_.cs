@@ -48,6 +48,7 @@ namespace XebecAPI.Configurations
             CreateMap<Location, LocationDTO>().ReverseMap();
             CreateMap<Policy, PolicyDTO>().ReverseMap();
             CreateMap<ProfilePicture, ProfilePictureDTO>().ReverseMap();
+            CreateMap<AdditionalDocument, AdditionalDocumentDTO>().ReverseMap();
         }
 
     }

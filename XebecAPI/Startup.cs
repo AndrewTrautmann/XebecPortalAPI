@@ -18,7 +18,9 @@ using System.Threading.Tasks;
 using XebecAPI.Configurations;
 using XebecAPI.Data;
 using XebecAPI.IRepositories;
+using XebecAPI.IRepositories.CustomIRepositories;
 using XebecAPI.Repositories;
+using XebecAPI.Repositories.CustomRepositories;
 
 namespace XebecAPI
 {

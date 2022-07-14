@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using XebecAPI.Data;
-using XebecAPI.IRepositories;
+using XebecAPI.IRepositories.CustomIRepositories;
 using XebecAPI.Shared;
 
-namespace XebecAPI.Repositories
+namespace XebecAPI.Repositories.CustomRepositories
 {
     public class MyJobsCustomRepo : GenericRepository<Application>, IMyJobsCustomRepo
     {

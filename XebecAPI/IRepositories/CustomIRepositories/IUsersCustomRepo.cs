@@ -6,7 +6,7 @@ using XebecAPI.DTOs.ViewModels;
 using XebecAPI.Shared;
 using XebecAPI.Shared.Security;
 
-namespace XebecAPI.IRepositories
+namespace XebecAPI.IRepositories.CustomIRepositories
 {
     public interface IUsersCustomRepo
     {

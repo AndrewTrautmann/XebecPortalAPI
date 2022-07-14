@@ -1,8 +1,6 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using XebecAPI.Data;
-using XebecAPI.IRepositories;
-using XebecAPI.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +8,9 @@ using System.Threading.Tasks;
 using XebecAPI.DTOs.ViewModels;
 using XebecAPI.Shared;
 using XebecAPI.Shared.Security;
+using XebecAPI.IRepositories.CustomIRepositories;
 
-namespace XebecAPI.Repositories
+namespace XebecAPI.Repositories.CustomRepositories
 {
     public class ApplicationPhaseHelperRepository : GenericRepository<ApplicationPhaseHelper>, IApplicationPhaseHelperRepository
     {
@@ -54,11 +53,11 @@ namespace XebecAPI.Repositories
             IQueryable<ApplicationPhaseHelper> queryphase;
             IQueryable<myJobsViewModel> queryFinal = null;
             IQueryable<Job> queryJobs = null;
-                queryphase = from applications in _context.Applications.Where(a => a.AppUserId == AppUserId && a.JobId == PhaseId)
-                             join phases in _context.ApplicationPhasesHelpers
-                                  on applications.Id equals phases.ApplicationId
-                             select phases;
-            queryphase = queryphase.Include(p => p.ApplicationPhase).Include(a => a.Application).ThenInclude(j => j.Job)    ;
+            queryphase = from applications in _context.Applications.Where(a => a.AppUserId == AppUserId && a.JobId == PhaseId)
+                         join phases in _context.ApplicationPhasesHelpers
+                              on applications.Id equals phases.ApplicationId
+                         select phases;
+            queryphase = queryphase.Include(p => p.ApplicationPhase).Include(a => a.Application).ThenInclude(j => j.Job);
             if (queryphase != null)
             {
                 queryJobs = from applications in _context.Applications.Where(a => a.AppUserId == AppUserId && a.JobId == PhaseId)
