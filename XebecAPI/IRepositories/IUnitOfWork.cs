@@ -70,6 +70,7 @@ namespace XebecAPI.IRepositories
         IGenericRepository<Policy> Policies { get; }
         IGenericRepository<ProfilePicture> ProfilePictures { get; }
         IGenericRepository<AdditionalDocument> AdditionalDocuments { get; }
+        IGenericRepository<CVDocument> CVDocuments { get; }
 
         //Saving to the DB
         Task Save();
