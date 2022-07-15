@@ -67,6 +67,7 @@ namespace XebecAPI.Data
         public DbSet<Policy> Policies { get; set; }
         public DbSet<ProfilePicture> ProfilePictures { get; set; }
         public DbSet<AdditionalDocument> AdditionalDocuments { get; set; }
+        public DbSet<CVDocument> CVDocuments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -69,6 +69,7 @@ namespace XebecAPI.Repositories
         private IGenericRepository<Policy> _policies;
         private IGenericRepository<ProfilePicture> _profilePictures;
         private IGenericRepository<AdditionalDocument> _additionalDocuments;
+        private IGenericRepository<CVDocument> _cvDocuments;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -147,6 +148,7 @@ namespace XebecAPI.Repositories
         public IGenericRepository<Policy> Policies  => _policies ??= new GenericRepository<Policy>(_context);
         public IGenericRepository<ProfilePicture> ProfilePictures  => _profilePictures ??= new GenericRepository<ProfilePicture>(_context);
         public IGenericRepository<AdditionalDocument> AdditionalDocuments=> _additionalDocuments ??= new GenericRepository<AdditionalDocument>(_context);
+        public IGenericRepository<CVDocument> CVDocuments => _cvDocuments ??= new GenericRepository<CVDocument>(_context);
 
         public void Dispose()
         {
